@@ -201,7 +201,7 @@ ipasign(){
     echo ${yellow}"Processing Provided Inputs and signing, please wait"${reset}
     echo # (optional) move to a new line
     # DO NOT CHANGE ANYTHING BELOW OR ON THE sign.sh FILE  ################################################################################
-    ipadestfolder="${ipasourcefolder}Signed/" 
+    ipadestfolder="${ipasourcefolder}/Signed/" 
     cd $ipasourcefolder
     rm -rf Signed/ appentitlements.txt newmaxentitlements.txt oldmaxentitlements.txt bundleversion.txt
     mkdir Signed
