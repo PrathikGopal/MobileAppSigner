@@ -233,7 +233,7 @@ ipasign(){
     echo ${reset} #just ending
     rm bundleversion.txt
     done
-    if [[ "$developer1" == "$PublicCertificate" ]] ; then
+    if [ ! -z "$PublicCertificate" ] && [ ! "$developer1" == "$PublicCertificate" ]; then
         read -p ${red}"Do you want to validate app with transporter? (press y/n)"${reset} -n 1 -r
         echo    # (optional) move to a new line
         if [[ ! $REPLY =~ ^[Yy]$ ]]; then
